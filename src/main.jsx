@@ -14,19 +14,20 @@ const router =  createBrowserRouter(
   createRoutesFromElements(
     <Route path='' element={<App/>}>
       <Route path='home' element={<Home/>}/>
-      <Route exact path='products' element={<Products/>}>
-        <Route path=':productid' element={<SingleProduct/>}/>
+      <Route path='products'>
+          <Route index element={<Products/>} />
+          <Route path=':productid' element={<SingleProduct/>} />
       </Route>
     </Route>
   )
 )
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  // <React.StrictMode>
+  <React.StrictMode>
     <QueryClientProvider client={queryClient}>
     <RouterProvider router={router}>
       <App />
     </RouterProvider>
     </QueryClientProvider>
-  // </React.StrictMode>,
+  </React.StrictMode>,
 )

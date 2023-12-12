@@ -10,7 +10,8 @@ body{
 }
 
 .home,
-.products {
+.products,
+.singleProduct {
     min-height: calc(var(--view-height) - (var(--header-height) + var(--footer-height)));
 }
 

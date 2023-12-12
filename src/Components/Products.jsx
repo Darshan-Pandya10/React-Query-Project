@@ -12,13 +12,13 @@ const getProduct = async() => {
 
 }
 
-  const {isLoading , error , data} =  useQuery({
+  const {isPending , error , data} =  useQuery({
         queryKey : ['products'],
         queryFn: getProduct,
         staleTime: 10000,
     })
 
-    if(isLoading){
+    if(isPending){
         <h1>Loading ...</h1>
     }
 
