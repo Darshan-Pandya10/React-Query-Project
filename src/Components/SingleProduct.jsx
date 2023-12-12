@@ -38,8 +38,11 @@ function SingleProduct() {
             console.log('Mutation Successful')
             queryClient.invalidateQueries(['singleProduct', productid])
         },
-        staleTime : 10000
+        staleTime : 0
     })
+
+    console.log('Data:', data);
+console.log('Mutation state:', mutation.data);
 
   
     // Dummy review data with only positive reviews
