@@ -1,0 +1,29 @@
+:root {
+    --view-height: 100vh;
+    --header-height: 4rem;
+    --footer-height: 4rem;
+    --hover-color: rgb(164, 157, 222);
+}
+
+body{
+    overflow-x: hidden;
+}
+
+.home,
+.products {
+    min-height: calc(var(--view-height) - (var(--header-height) + var(--footer-height)));
+}
+
+
+.active{
+    color: var(--hover-color);
+}
+
+.footer{
+    height: var(--footer-height);
+}
+
+.footer p a {
+    color: var(--hover-color);
+    text-decoration: none;
+}
